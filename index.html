@@ -1,0 +1,1942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FITNITY – Transform Your Body. Transform Your Life.</title>
+<meta name="description" content="Expert fitness coaching, personal training, Zumba, Calisthenics, Cycling and Dance Fitness. Transform your body in 30 days.">
+<meta name="keywords" content="Personal Trainer India, Online Fitness Coach, Zumba Classes, Calisthenics Training, Cycling Coach, Dance Fitness Classes, Weight Loss Coach, Fitness Transformation Program">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- FormSubmit.co is used to send client form submissions directly to vivekkaushal9882@gmail.com -->
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --gold-dim: #7A6128;
+    --black: #0A0A0A;
+    --dark: #111111;
+    --dark2: #1A1A1A;
+    --dark3: #242424;
+    --dark4: #2E2E2E;
+    --white: #FFFFFF;
+    --off-white: #F5F3EE;
+    --gray: #888888;
+    --light-gray: #CCCCCC;
+    --blue: #4A90D9;
+    --blue-light: #6AAEE8;
+    --red: #D94A4A;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    transition: all 0.3s ease;
+  }
+  nav.scrolled { height: 60px; background: rgba(10,10,10,0.98); }
+
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--light-gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--black) !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2px;
+    font-weight: 600 !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; color: var(--black) !important; }
+
+  .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--black);
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,168,76,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 30% 30%, rgba(74,144,217,0.04) 0%, transparent 50%);
+  }
+
+  .hero-grid-lines {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 120px 5% 130px;
+    max-width: 800px;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+  }
+  .hero-badge::before { content: ''; display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: pulse 2s infinite; }
+
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.5rem, 9vw, 7.5rem);
+    line-height: 0.93;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
+  }
+  .hero-title .line-gold { color: var(--gold); }
+  .hero-title .line-outline {
+    -webkit-text-stroke: 2px rgba(255,255,255,0.3);
+    color: transparent;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--light-gray);
+    letter-spacing: 0.05em;
+    margin-bottom: 2.5rem;
+    max-width: 520px;
+    line-height: 1.6;
+  }
+  .hero-sub strong { color: var(--gold); font-weight: 500; }
+
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--gold);
+    color: var(--black);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.85rem 2rem;
+    border: none; border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent;
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.85rem 2rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+  .hero-stats {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    display: flex; align-items: stretch;
+    z-index: 2;
+    background: rgba(10,10,10,0.75);
+    border-top: 1px solid rgba(201,168,76,0.18);
+    backdrop-filter: blur(8px);
+  }
+  .stat {
+    flex: 1; text-align: center;
+    padding: 1.3rem 1rem;
+    border-right: 1px solid rgba(201,168,76,0.12);
+  }
+  .stat:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.4rem;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .stat-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-top: 4px;
+  }
+
+  .hero-scroll-hint {
+    position: absolute; bottom: 30px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+  }
+  .scroll-line {
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollDrop 2s infinite;
+  }
+  @keyframes scrollDrop { 0%{opacity:0;transform:scaleY(0);transform-origin:top} 50%{opacity:1;transform:scaleY(1)} 100%{opacity:0;transform:scaleY(1)} }
+
+  /* SECTIONS */
+  section { padding: 100px 5%; }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    letter-spacing: 0.03em;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--gray);
+    max-width: 520px;
+    line-height: 1.7;
+  }
+  .section-header { margin-bottom: 4rem; }
+
+  /* DIVIDER */
+  .gold-divider {
+    width: 60px; height: 3px;
+    background: linear-gradient(to right, var(--gold), var(--gold-light));
+    margin: 1.2rem 0 1.5rem;
+  }
+
+  /* SERVICES */
+  #services { background: var(--dark); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5px;
+  }
+
+  .service-card {
+    background: var(--dark2);
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.04);
+  }
+  .service-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .service-card:hover { background: var(--dark3); transform: translateY(-4px); }
+  .service-card:hover::before { opacity: 1; }
+
+  .service-icon {
+    width: 56px; height: 56px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s;
+  }
+  .service-card:hover .service-icon { background: rgba(201,168,76,0.2); }
+
+  .service-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+    color: var(--white);
+  }
+  .service-desc {
+    font-size: 0.88rem;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  .service-features {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 0.4rem;
+  }
+  .service-features li {
+    font-size: 0.8rem;
+    color: var(--light-gray);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .service-features li::before {
+    content: '';
+    width: 5px; height: 5px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* TRANSFORMATION BANNER */
+  #guarantee {
+    background: var(--dark2);
+    padding: 80px 5%;
+    position: relative;
+    overflow: hidden;
+  }
+  .guarantee-inner {
+    display: flex; align-items: center; gap: 4rem;
+    max-width: 1100px; margin: 0 auto;
+  }
+  .guarantee-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10rem;
+    line-height: 1;
+    color: rgba(201,168,76,0.15);
+    flex-shrink: 0;
+    transition: color 0.5s;
+  }
+  .guarantee-inner:hover .guarantee-number { color: rgba(201,168,76,0.25); }
+  .guarantee-text { flex: 1; }
+  .guarantee-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.03em;
+  }
+  .guarantee-title span { color: var(--gold); }
+  .guarantee-desc {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    max-width: 560px;
+  }
+  .guarantee-badges {
+    display: flex; flex-wrap: wrap; gap: 0.75rem;
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.2);
+    color: var(--gold);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.9rem;
+    border-radius: 2px;
+  }
+
+  /* WHY CHOOSE */
+  #why { background: var(--black); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+  }
+  .why-card {
+    display: flex; flex-direction: column; gap: 1rem;
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 2px;
+    transition: all 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .why-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--gold), var(--blue));
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+  .why-card:hover::after { transform: scaleX(1); }
+  .why-card:hover { border-color: rgba(201,168,76,0.2); background: var(--dark2); }
+  .why-icon { font-size: 2rem; }
+  .why-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+  .why-desc { font-size: 0.85rem; color: var(--gray); line-height: 1.6; }
+
+  /* PRICING */
+  #pricing {
+    background: var(--dark);
+    position: relative; overflow: hidden;
+  }
+  #pricing::before {
+    content: 'PRICING';
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20vw;
+    color: rgba(255,255,255,0.02);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative; z-index: 1;
+  }
+
+  .pricing-category { margin-bottom: 3rem; }
+  .pricing-cat-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .pricing-cat-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+  }
+
+  .pricing-card {
+    background: var(--dark2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 2px;
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.3s;
+  }
+  .pricing-card.featured {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, var(--dark2), rgba(201,168,76,0.04));
+  }
+  .pricing-card:hover { transform: translateY(-4px); border-color: rgba(201,168,76,0.4); }
+
+  .pricing-tag {
+    position: absolute; top: -1px; right: 2rem;
+    background: var(--gold);
+    color: var(--black);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .pricing-plan {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .pricing-amount {
+    display: flex; align-items: baseline; gap: 4px;
+    margin-bottom: 0.25rem;
+  }
+  .price-currency { font-size: 1.5rem; font-weight: 300; color: var(--gold); }
+  .price-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--white);
+    letter-spacing: 0.02em;
+  }
+  .price-period {
+    font-size: 0.8rem;
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+  }
+
+  .pricing-divider { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 1.5rem 0; }
+
+  .pricing-features {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  .pricing-features li {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.88rem;
+    color: var(--light-gray);
+  }
+  .pricing-features li .check { color: var(--gold); font-size: 0.9rem; flex-shrink: 0; }
+
+  /* TESTIMONIALS */
+  #testimonials { background: var(--black); overflow: hidden; }
+
+  .testimonials-track-wrap {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+  .testimonials-track {
+    display: flex; gap: 1.5rem;
+    width: max-content;
+    animation: scrollLeft 35s linear infinite;
+  }
+  .testimonials-track:hover { animation-play-state: paused; }
+
+  @keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .testimonial-card {
+    background: var(--dark2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 2px;
+    padding: 2rem;
+    width: 340px;
+    flex-shrink: 0;
+    transition: border-color 0.3s;
+  }
+  .testimonial-card:hover { border-color: rgba(201,168,76,0.3); }
+
+  .stars {
+    display: flex; gap: 3px;
+    margin-bottom: 1rem;
+  }
+  .star { color: var(--gold); font-size: 0.9rem; }
+
+  .testimonial-text {
+    font-size: 0.88rem;
+    color: var(--light-gray);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial-author {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .author-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-dim), var(--gold));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    color: var(--black);
+    flex-shrink: 0;
+  }
+  .author-name {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--white);
+  }
+  .author-detail { font-size: 0.78rem; color: var(--gray); }
+  .author-result {
+    margin-top: 3px;
+    font-size: 0.75rem;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  /* GALLERY */
+  #gallery { background: var(--dark); }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1.5px;
+  }
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1;
+    background: var(--dark3);
+    cursor: pointer;
+  }
+  .gallery-item:first-child { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+  .gallery-item:last-child { grid-column: span 2; aspect-ratio: auto; min-height: 220px; }
+
+  .gallery-placeholder {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 1rem;
+    background: var(--dark3);
+    transition: all 0.4s;
+    min-height: 220px;
+  }
+  .gallery-item:hover .gallery-placeholder { background: var(--dark4); }
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+  .gallery-icon { font-size: 2.5rem; opacity: 0.3; }
+  .gallery-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  .gallery-overlay {
+    position: absolute; inset: 0;
+    background: rgba(201,168,76,0.08);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .gallery-overlay-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+  }
+
+  /* FAQ */
+  #faq { background: var(--black); }
+  .faq-list {
+    max-width: 800px;
+    display: flex; flex-direction: column; gap: 0;
+  }
+  .faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .faq-question {
+    width: 100%;
+    background: none; border: none;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.5rem 0;
+    cursor: pointer;
+    text-align: left;
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    gap: 1rem;
+    transition: color 0.2s;
+  }
+  .faq-question:hover { color: var(--gold); }
+  .faq-arrow {
+    font-size: 1.2rem;
+    color: var(--gold);
+    flex-shrink: 0;
+    transition: transform 0.3s;
+  }
+  .faq-item.open .faq-arrow { transform: rotate(45deg); }
+  .faq-answer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease, padding 0.35s;
+  }
+  .faq-item.open .faq-answer { max-height: 300px; }
+  .faq-answer-inner {
+    padding: 0 0 1.5rem;
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.8;
+  }
+
+  /* CONTACT */
+  #contact { background: var(--dark2); }
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .contact-info { display: flex; flex-direction: column; gap: 2.5rem; }
+
+  .contact-item {
+    display: flex; flex-direction: column; gap: 0.4rem;
+  }
+  .contact-item-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .contact-item-value {
+    font-size: 1.1rem;
+    color: var(--white);
+  }
+  .contact-item-value a { color: var(--white); text-decoration: none; transition: color 0.2s; }
+  .contact-item-value a:hover { color: var(--gold); }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+  .form-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+  .form-input, .form-select, .form-textarea {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.85rem 1rem;
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    -webkit-appearance: none;
+  }
+  .form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.25); }
+  .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--gold); }
+  .form-select { cursor: pointer; }
+  .form-select option { background: var(--dark2); }
+  .form-textarea { resize: vertical; min-height: 120px; }
+
+  /* FOOTER */
+  footer {
+    background: var(--black);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 3rem 5%;
+  }
+  .footer-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1.5rem;
+  }
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: var(--white);
+    letter-spacing: 0.08em;
+  }
+  .footer-logo span { color: var(--gold); }
+  .footer-copy { font-size: 0.8rem; color: var(--gray); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a {
+    font-size: 0.8rem;
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* WHATSAPP FLOAT */
+  .whatsapp-btn {
+    position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+    width: 58px; height: 58px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+    transition: all 0.3s;
+    animation: waBounce 3s ease-in-out infinite;
+  }
+  .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+  @keyframes waBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+  .whatsapp-btn svg { width: 30px; height: 30px; fill: white; }
+  .wa-tooltip {
+    position: absolute; right: calc(100% + 12px); top: 50%;
+    transform: translateY(-50%);
+    background: var(--dark2);
+    border: 1px solid rgba(37,211,102,0.3);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    padding: 0.4rem 0.8rem;
+    border-radius: 2px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .whatsapp-btn:hover .wa-tooltip { opacity: 1; }
+
+  /* BOOKING MODAL */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 2000;
+    background: rgba(0,0,0,0.85);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s;
+    padding: 1rem;
+  }
+  .modal-overlay.active { opacity: 1; pointer-events: all; }
+  .modal {
+    background: var(--dark2);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 4px;
+    padding: 2.5rem;
+    width: 100%; max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: translateY(20px);
+    transition: transform 0.3s;
+    position: relative;
+  }
+  .modal-overlay.active .modal { transform: translateY(0); }
+  .modal-close {
+    position: absolute; top: 1rem; right: 1rem;
+    background: none; border: none;
+    color: var(--gray); font-size: 1.5rem;
+    cursor: pointer; line-height: 1;
+    transition: color 0.2s;
+  }
+  .modal-close:hover { color: var(--white); }
+  .modal-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+    color: var(--white);
+  }
+  .modal-title span { color: var(--gold); }
+  .modal-sub { font-size: 0.85rem; color: var(--gray); margin-bottom: 2rem; }
+  .booking-form { display: flex; flex-direction: column; gap: 1rem; }
+  .time-slots {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;
+  }
+  .time-slot {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--light-gray);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .time-slot:hover, .time-slot.selected { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.08); }
+
+  /* MOBILE NAV */
+  .mobile-nav {
+    display: none;
+    position: fixed; top: 72px; left: 0; right: 0; z-index: 999;
+    background: rgba(10,10,10,0.98);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    padding: 1rem 5%;
+    flex-direction: column; gap: 0.5rem;
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--light-gray);
+    text-decoration: none;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: color 0.2s;
+  }
+  .mobile-nav a:hover { color: var(--gold); }
+
+  /* SUCCESS NOTICE */
+  .success-notice {
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 2px;
+    padding: 1rem 1.25rem;
+    color: var(--gold);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    display: none;
+  }
+  .success-notice.show { display: block; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero-stats { flex-wrap: nowrap; }
+    .stat { padding: 1rem 0.4rem; }
+    .stat-num { font-size: 1.8rem; }
+    .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .gallery-grid { grid-template-columns: repeat(2,1fr); }
+    .gallery-item:first-child { grid-column: span 2; }
+    .gallery-item:last-child { grid-column: span 2; }
+    .guarantee-inner { flex-direction: column; gap: 1.5rem; }
+    .guarantee-number { font-size: 6rem; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+  }
+  @media (max-width: 600px) {
+    section { padding: 70px 5%; }
+    .form-row { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-item:first-child { grid-column: auto; }
+    .gallery-item:last-child { grid-column: auto; }
+    .hero-stats { flex-wrap: wrap; }
+    .stat { flex: 1 1 45%; border-right: none; border-bottom: 1px solid rgba(201,168,76,0.1); padding: 0.8rem 0.5rem; }
+    .stat:nth-child(odd) { border-right: 1px solid rgba(201,168,76,0.1); }
+    .stat-num { font-size: 1.5rem; }
+    .time-slots { grid-template-columns: repeat(2,1fr); }
+  }
+
+  /* ANIMATIONS */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">FIT<span>NITY</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#testimonials">Results</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#" class="nav-cta" onclick="openBooking(event)">Book Free Session</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#services" onclick="closeMobileNav()">Services</a>
+  <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
+  <a href="#testimonials" onclick="closeMobileNav()">Results</a>
+  <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  <a href="#" onclick="openBooking(event)">Book Free Session</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🏆 India's Premier Fitness Platform</div>
+    <h1 class="hero-title">
+      <span class="line-gold">Achieve Your</span><br>
+      Dream Body<br>
+      <span class="line-outline">In 30 Days</span>
+    </h1>
+    <p class="hero-sub">
+      <strong>Expert Coaching</strong> | Personal Training | Zumba | Calisthenics | Cycling | Dance Fitness<br>
+      Transform Your Body. Transform Your Life.
+    </p>
+    <div class="hero-btns">
+      <a href="#" class="btn-primary" onclick="openBooking(event)">
+        ⚡ Book Free Consultation
+      </a>
+      <a href="#services" class="btn-secondary">
+        Explore Programs →
+      </a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Clients Transformed</div></div>
+    <div class="stat"><div class="stat-num">30</div><div class="stat-label">Day Commitment</div></div>
+    <div class="stat"><div class="stat-num">6</div><div class="stat-label">Expert Programs</div></div>
+    <div class="stat"><div class="stat-num">4.9★</div><div class="stat-label">Client Rating</div></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-header reveal">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">Our Programs</h2>
+    <div class="gold-divider"></div>
+    <p class="section-subtitle">Expert-led fitness programs tailored to your goals — whether you're just starting or ready to level up.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-icon">🏋️</div>
+      <div class="service-name">Personal Training</div>
+      <p class="service-desc">Completely tailored 1-on-1 coaching that fits your body, schedule and goals.</p>
+      <ul class="service-features">
+        <li>One-on-one expert coaching</li>
+        <li>Customized workout plans</li>
+        <li>Weight loss & muscle gain programs</li>
+        <li>Home workout support</li>
+      </ul>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-icon">💃</div>
+      <div class="service-name">Zumba Classes</div>
+      <p class="service-desc">Energetic, fun dance fitness sessions for all ages that make burning fat feel like a party.</p>
+      <ul class="service-features">
+        <li>Fun, high-energy workouts</li>
+        <li>Suitable for all age groups</li>
+        <li>Intense fat-burning sessions</li>
+        <li>Group class atmosphere</li>
+      </ul>
+    </div>
+    <div class="service-card reveal reveal-delay-3">
+      <div class="service-icon">🤸</div>
+      <div class="service-name">Calisthenics Training</div>
+      <p class="service-desc">Build real functional strength using your own bodyweight — beginner to elite levels.</p>
+      <ul class="service-features">
+        <li>Bodyweight strength training</li>
+        <li>Beginner to advanced coaching</li>
+        <li>Mobility & flexibility development</li>
+        <li>No gym equipment needed</li>
+      </ul>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-icon">🚴</div>
+      <div class="service-name">Cycling Coaching</div>
+      <p class="service-desc">Structured cycling plans to build endurance, burn calories and elevate performance.</p>
+      <ul class="service-features">
+        <li>Endurance building plans</li>
+        <li>Performance improvement</li>
+        <li>Personalized cycling programs</li>
+        <li>Online & outdoor sessions</li>
+      </ul>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-icon">🎵</div>
+      <div class="service-name">Dance Fitness</div>
+      <p class="service-desc">Get fit through movement and music. Cardio-based dance sessions that are addictively fun.</p>
+      <ul class="service-features">
+        <li>Cardio-focused dance workouts</li>
+        <li>Fun group environments</li>
+        <li>Multiple dance styles</li>
+        <li>Beginner-friendly</li>
+      </ul>
+    </div>
+    <div class="service-card reveal reveal-delay-3">
+      <div class="service-icon">🏠</div>
+      <div class="service-name">Home Workout Coaching</div>
+      <p class="service-desc">Expert guidance from the comfort of your home — no commute, no gym required.</p>
+      <ul class="service-features">
+        <li>Personal trainer at your home</li>
+        <li>Online fitness guidance</li>
+        <li>Flexible scheduling</li>
+        <li>Equipment-free options</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<div id="guarantee">
+  <div class="guarantee-inner">
+    <div class="guarantee-number">30</div>
+    <div class="guarantee-text reveal">
+      <p class="section-label">Our Commitment</p>
+      <h2 class="section-title">30-Day <span style="color:var(--gold)">Transformation</span> Commitment</h2>
+      <div class="gold-divider"></div>
+      <p class="guarantee-desc">We are fully committed to helping every client achieve visible, measurable progress within 30 days through disciplined training, personalized programs, and continuous support. You'll never train alone — we're with you every step of the way.</p>
+      <div class="guarantee-badges">
+        <span class="badge">✓ Certified Trainers</span>
+        <span class="badge">✓ Personalized Plans</span>
+        <span class="badge">✓ Progress Tracking</span>
+        <span class="badge">✓ Nutrition Guidance</span>
+        <span class="badge">✓ Ongoing Support</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY CHOOSE -->
+<section id="why">
+  <div class="section-header reveal">
+    <p class="section-label">The FITNITY Difference</p>
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="gold-divider"></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal reveal-delay-1">
+      <div class="why-icon">🏅</div>
+      <div class="why-title">Certified Guidance</div>
+      <p class="why-desc">All programs led by qualified fitness professionals with proven expertise.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-2">
+      <div class="why-icon">🎯</div>
+      <div class="why-title">Personalized Programs</div>
+      <p class="why-desc">No two clients are the same. Every plan is built specifically around your body and goals.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-3">
+      <div class="why-icon">📱</div>
+      <div class="why-title">Online & Offline</div>
+      <p class="why-desc">Train from home or in person — flexibility to match your lifestyle and location.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-4">
+      <div class="why-icon">💰</div>
+      <div class="why-title">Affordable Pricing</div>
+      <p class="why-desc">Premium coaching at accessible prices, with packages for every budget.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-1">
+      <div class="why-icon">📊</div>
+      <div class="why-title">Progress Monitoring</div>
+      <p class="why-desc">Weekly check-ins and detailed tracking to keep you accountable and motivated.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-2">
+      <div class="why-icon">🤝</div>
+      <div class="why-title">Community Support</div>
+      <p class="why-desc">Join a community of motivated individuals all working toward transformation.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-3">
+      <div class="why-icon">⏰</div>
+      <div class="why-title">Flexible Scheduling</div>
+      <p class="why-desc">Morning, evening, or weekend slots available to fit around your busy schedule.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-4">
+      <div class="why-icon">❤️</div>
+      <div class="why-title">Client-Centered</div>
+      <p class="why-desc">Your success is our mission. We go beyond training to ensure you thrive.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-header reveal" style="text-align:center; margin-bottom: 3rem;">
+    <p class="section-label">Investment In Yourself</p>
+    <h2 class="section-title">Simple, Clear Pricing</h2>
+    <div class="gold-divider" style="margin: 1.2rem auto 1.5rem;"></div>
+    <p class="section-subtitle" style="margin: 0 auto;">Transparent pricing with no hidden fees. Choose the plan that fits your commitment level.</p>
+  </div>
+
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <p class="pricing-cat-title reveal">🇮🇳 Indian Clients</p>
+    <div class="pricing-grid reveal">
+      <div class="pricing-card">
+        <div class="pricing-plan">Per Session</div>
+        <div class="pricing-amount">
+          <span class="price-currency">₹</span>
+          <span class="price-value">500</span>
+        </div>
+        <p class="price-period">per session</p>
+        <hr class="pricing-divider">
+        <ul class="pricing-features">
+          <li><span class="check">✦</span> Expert one-on-one coaching</li>
+          <li><span class="check">✦</span> Custom workout guidance</li>
+          <li><span class="check">✦</span> Session feedback & tips</li>
+          <li><span class="check">✦</span> Flexible scheduling</li>
+        </ul>
+        <a href="#" class="btn-secondary" onclick="openBooking(event)" style="text-align:center; justify-content:center; width:100%">Book a Session</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-tag">Most Popular</div>
+        <div class="pricing-plan">Monthly Package</div>
+        <div class="pricing-amount">
+          <span class="price-currency">₹</span>
+          <span class="price-value">13,000</span>
+        </div>
+        <p class="price-period">per month · Limited-time pricing</p>
+        <hr class="pricing-divider">
+        <ul class="pricing-features">
+          <li><span class="check">✦</span> Daily personalized coaching</li>
+          <li><span class="check">✦</span> Nutrition guidance included</li>
+          <li><span class="check">✦</span> Weekly progress tracking</li>
+          <li><span class="check">✦</span> Online + offline support</li>
+          <li><span class="check">✦</span> Custom meal plan outline</li>
+          <li><span class="check">✦</span> 30-day transformation plan</li>
+        </ul>
+        <a href="#" class="btn-primary" onclick="openBooking(event)" style="text-align:center; justify-content:center; width:100%">Start Transformation</a>
+      </div>
+    </div>
+
+    <p class="pricing-cat-title reveal" style="margin-top: 3rem;">🌍 International Clients</p>
+    <div class="pricing-grid reveal">
+      <div class="pricing-card">
+        <div class="pricing-plan">Per Session</div>
+        <div class="pricing-amount">
+          <span class="price-currency">₹</span>
+          <span class="price-value">1,000</span>
+        </div>
+        <p class="price-period">per session · online coaching</p>
+        <hr class="pricing-divider">
+        <ul class="pricing-features">
+          <li><span class="check">✦</span> Expert online coaching</li>
+          <li><span class="check">✦</span> Video call session</li>
+          <li><span class="check">✦</span> Session notes & plan</li>
+          <li><span class="check">✦</span> Flexible time zones</li>
+        </ul>
+        <a href="#" class="btn-secondary" onclick="openBooking(event)" style="text-align:center; justify-content:center; width:100%">Book Online Session</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-tag">Premium</div>
+        <div class="pricing-plan">Monthly Premium</div>
+        <div class="pricing-amount">
+          <span class="price-currency">₹</span>
+          <span class="price-value">25,000</span>
+        </div>
+        <p class="price-period">per month · full premium support</p>
+        <hr class="pricing-divider">
+        <ul class="pricing-features">
+          <li><span class="check">✦</span> Fully customized fitness plan</li>
+          <li><span class="check">✦</span> Weekly progress reviews</li>
+          <li><span class="check">✦</span> 24/7 online coaching support</li>
+          <li><span class="check">✦</span> Nutrition consultation</li>
+          <li><span class="check">✦</span> Video analysis & feedback</li>
+          <li><span class="check">✦</span> Priority trainer access</li>
+        </ul>
+        <a href="#" class="btn-primary" onclick="openBooking(event)" style="text-align:center; justify-content:center; width:100%">Start Premium Plan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="padding-bottom:0; overflow:hidden;">
+  <div class="section-header reveal" style="text-align:center;">
+    <p class="section-label">Real Results</p>
+    <h2 class="section-title">Client Success Stories</h2>
+    <div class="gold-divider" style="margin: 1.2rem auto 1.5rem;"></div>
+    <p class="section-subtitle" style="margin: 0 auto;">Real people, real transformations. Here's what our clients say about their FITNITY journey.</p>
+  </div>
+</section>
+<div style="padding: 3rem 0 6rem; overflow:hidden; background: var(--black);">
+  <div class="testimonials-track-wrap">
+    <div class="testimonials-track" id="testimonialsTrack">
+      <!-- Set 1 -->
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"I lost 12kg in just 6 weeks following Vivek's program. The personalized plan made all the difference — I never felt lost or unmotivated."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RK</div>
+          <div>
+            <div class="author-name">Rahul Khatri</div>
+            <div class="author-detail">Delhi, India</div>
+            <div class="author-result">↓ 12kg in 6 weeks</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The Zumba classes are incredibly fun and effective. I've never enjoyed working out this much. My stamina has improved dramatically!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">PS</div>
+          <div>
+            <div class="author-name">Priya Sharma</div>
+            <div class="author-detail">Mumbai, India</div>
+            <div class="author-result">↑ Stamina +80%</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Online coaching worked perfectly for my busy schedule. I can now do a full pull-up and my body has completely changed shape. Highly recommend!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AM</div>
+          <div>
+            <div class="author-name">Arjun Mehta</div>
+            <div class="author-detail">Bangalore, India</div>
+            <div class="author-result">↑ First Pull-up achieved</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"As an NRI, the international online package was perfect. The weekly reviews kept me on track and the results have been phenomenal."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SD</div>
+          <div>
+            <div class="author-name">Sanjana Desai</div>
+            <div class="author-detail">Dubai, UAE</div>
+            <div class="author-result">↓ 8kg · gained muscle tone</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The calisthenics training completely transformed my upper body strength. Coach Vivek's technique guidance is exceptional — no injuries, all gains."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">VN</div>
+          <div>
+            <div class="author-name">Vikram Nair</div>
+            <div class="author-detail">Pune, India</div>
+            <div class="author-result">↑ Bench press +45kg</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"At 52, I thought getting fit was behind me. FITNITY proved me wrong. The dance fitness classes are joy-filled and I've lost 9kg without it feeling like exercise!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MJ</div>
+          <div>
+            <div class="author-name">Meena Joshi</div>
+            <div class="author-detail">Chandigarh, India</div>
+            <div class="author-result">↓ 9kg at age 52</div>
+          </div>
+        </div>
+      </div>
+      <!-- Duplicate for infinite loop -->
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"I lost 12kg in just 6 weeks following Vivek's program. The personalized plan made all the difference — I never felt lost or unmotivated."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RK</div>
+          <div>
+            <div class="author-name">Rahul Khatri</div>
+            <div class="author-detail">Delhi, India</div>
+            <div class="author-result">↓ 12kg in 6 weeks</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The Zumba classes are incredibly fun and effective. I've never enjoyed working out this much. My stamina has improved dramatically!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">PS</div>
+          <div>
+            <div class="author-name">Priya Sharma</div>
+            <div class="author-detail">Mumbai, India</div>
+            <div class="author-result">↑ Stamina +80%</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Online coaching worked perfectly for my busy schedule. I can now do a full pull-up and my body has completely changed shape. Highly recommend!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AM</div>
+          <div>
+            <div class="author-name">Arjun Mehta</div>
+            <div class="author-detail">Bangalore, India</div>
+            <div class="author-result">↑ First Pull-up achieved</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"As an NRI, the international online package was perfect. The weekly reviews kept me on track and the results have been phenomenal."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SD</div>
+          <div>
+            <div class="author-name">Sanjana Desai</div>
+            <div class="author-detail">Dubai, UAE</div>
+            <div class="author-result">↓ 8kg · gained muscle tone</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The calisthenics training completely transformed my upper body strength. Coach Vivek's technique guidance is exceptional — no injuries, all gains."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">VN</div>
+          <div>
+            <div class="author-name">Vikram Nair</div>
+            <div class="author-detail">Pune, India</div>
+            <div class="author-result">↑ Bench press +45kg</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"At 52, I thought getting fit was behind me. FITNITY proved me wrong. The dance fitness classes are joy-filled and I've lost 9kg without it feeling like exercise!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MJ</div>
+          <div>
+            <div class="author-name">Meena Joshi</div>
+            <div class="author-detail">Chandigarh, India</div>
+            <div class="author-result">↓ 9kg at age 52</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-header reveal" style="text-align:center;">
+    <p class="section-label">Our Community</p>
+    <h2 class="section-title">In Action</h2>
+    <div class="gold-divider" style="margin: 1.2rem auto 1.5rem;"></div>
+    <p class="section-subtitle" style="margin: 0 auto;">Real sessions, real sweat, real results. Add your photos here to showcase your clients.</p>
+  </div>
+  <div class="gallery-grid reveal">
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="gallery-icon">🏋️</div>
+        <div class="gallery-label">Personal Training</div>
+      </div>
+      <div class="gallery-overlay"><div class="gallery-overlay-label">Personal Training</div></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="gallery-icon">🚴</div>
+        <div class="gallery-label">Cycling Sessions</div>
+      </div>
+      <div class="gallery-overlay"><div class="gallery-overlay-label">Cycling</div></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="gallery-icon">💃</div>
+        <div class="gallery-label">Zumba Classes</div>
+      </div>
+      <div class="gallery-overlay"><div class="gallery-overlay-label">Zumba</div></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="gallery-icon">🤸</div>
+        <div class="gallery-label">Calisthenics Training</div>
+      </div>
+      <div class="gallery-overlay"><div class="gallery-overlay-label">Calisthenics</div></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="gallery-icon">🎵</div>
+        <div class="gallery-label">Dance Fitness</div>
+      </div>
+      <div class="gallery-overlay"><div class="gallery-overlay-label">Dance Fitness</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-header reveal">
+    <p class="section-label">Got Questions?</p>
+    <h2 class="section-title">Frequently Asked</h2>
+    <div class="gold-divider"></div>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How much does personal training cost?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">For Indian clients, sessions start at ₹500 per session, with a monthly package at ₹13,000 which includes personalized coaching, nutrition guidance and progress tracking. International clients are priced at ₹1,000 per session or ₹25,000 per month for the premium online package.</div>
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What kind of results can I expect in 30 days?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">With consistent effort and following the prescribed program, most clients see visible body composition changes, improved energy levels, better posture, and measurable strength or endurance gains within 30 days. Results vary based on individual starting points and commitment levels.</div>
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Do you offer online coaching?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Yes! We offer complete online coaching including live video sessions, workout plan delivery, WhatsApp support, and weekly progress reviews. Our online programs are specifically designed for clients across India and internationally who prefer remote training.</div>
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        I'm a complete beginner. Are your programs suitable for me?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Absolutely. Every program at FITNITY is fully personalized to your current fitness level. Whether you've never exercised before or you're returning after a break, we start where you are and build progressively. No prior fitness experience is required.</div>
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I schedule a session?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">You can book a free consultation directly on this website by clicking "Book Free Session," contact us via WhatsApp at +91 8219006245, or fill in the contact form below. We typically respond within a few hours and will confirm your preferred time slot.</div>
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What's included in the monthly package?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">The monthly package includes daily personalized training sessions (or a set number per week based on your program), a custom workout plan, nutrition guidance, weekly check-ins, progress tracking, and ongoing WhatsApp/online support throughout the month.</div>
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Which fitness program should I choose?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">We recommend starting with a free consultation where we'll assess your goals, fitness level, and preferences before recommending the most suitable program. Many clients begin with Personal Training and incorporate Zumba or Dance Fitness for variety and enjoyment.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header reveal">
+    <p class="section-label">Get In Touch</p>
+    <h2 class="section-title">Start Your Journey</h2>
+    <div class="gold-divider"></div>
+    <p class="section-subtitle">Book your free consultation today. No obligation — just a conversation about your goals.</p>
+  </div>
+  <div class="contact-layout">
+    <div class="contact-info reveal">
+      <div class="contact-item">
+        <div class="contact-item-label">Phone / WhatsApp</div>
+        <div class="contact-item-value">
+          <a href="tel:+918219006245">+91 82190 06245</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">Email</div>
+        <div class="contact-item-value">
+          <a href="mailto:vivekkaushal9882@gmail.com">vivekkaushal9882@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">Available</div>
+        <div class="contact-item-value" style="color: var(--gray); font-size:0.95rem;">Mon – Sat · 6 AM – 9 PM IST</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">Response Time</div>
+        <div class="contact-item-value" style="color: var(--gray); font-size:0.95rem;">Usually within 2–4 hours</div>
+      </div>
+
+      <div style="margin-top: 1rem;">
+        <p style="font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem;">Follow Us</p>
+        <div style="display:flex; gap:0.75rem;">
+          <a href="#" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(255,255,255,0.1);border-radius:2px;color:var(--gray);font-size:1.1rem;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='var(--gray)'">📸</a>
+          <a href="#" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(255,255,255,0.1);border-radius:2px;color:var(--gray);font-size:1.1rem;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='var(--gray)'">▶️</a>
+          <a href="#" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(255,255,255,0.1);border-radius:2px;color:var(--gray);font-size:1.1rem;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='var(--gray)'">💬</a>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form reveal reveal-delay-2" id="contactForm" onsubmit="submitContactForm(event)">
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" id="c_name" name="Full Name" class="form-input" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number *</label>
+          <input type="tel" id="c_phone" name="Phone Number" class="form-input" placeholder="+91 or international" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address *</label>
+        <input type="email" id="c_email" name="email" class="form-input" placeholder="your@email.com" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Fitness Goal</label>
+          <select id="c_goal" name="Fitness Goal" class="form-select form-input">
+            <option value="">Select your goal</option>
+            <option>Weight Loss</option>
+            <option>Muscle Gain</option>
+            <option>General Fitness</option>
+            <option>Endurance & Stamina</option>
+            <option>Flexibility & Mobility</option>
+            <option>Sports Performance</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Preferred Program</label>
+          <select id="c_program" name="Preferred Program" class="form-select form-input">
+            <option value="">Select program</option>
+            <option>Personal Training</option>
+            <option>Zumba Classes</option>
+            <option>Calisthenics Training</option>
+            <option>Cycling Coaching</option>
+            <option>Dance Fitness</option>
+            <option>Home Workout Coaching</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea id="c_message" name="Message" class="form-textarea" placeholder="Tell us about your current fitness level, any health considerations, or questions you have..."></textarea>
+      </div>
+      <button type="submit" id="contactSubmitBtn" class="btn-primary" style="width:100%; justify-content:center; font-size:1rem; padding: 1rem;">
+        ⚡ Book My Consultation
+      </button>
+      <div class="success-notice" id="contactSuccess">
+        ✓ Thanks! We've received your inquiry and will contact you within a few hours to confirm your free consultation.
+      </div>
+      <div class="success-notice" id="contactError" style="border-color:rgba(217,74,74,0.4);background:rgba(217,74,74,0.08);color:#e07070;">
+        ⚠ Something went wrong. Please email us directly at vivekkaushal9882@gmail.com
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">FIT<span>NITY</span></div>
+    <p class="footer-copy">© 2025 FITNITY. Transform Your Body. Transform Your Life.</p>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918219006245?text=Hi%20FITNITY!%20I%27m%20interested%20in%20your%20fitness%20programs." class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <span class="wa-tooltip">Chat on WhatsApp</span>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="bookingModal" onclick="closeBookingOnOverlay(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeBooking()">×</button>
+    <h2 class="modal-title">Book a <span>Free</span> Session</h2>
+    <p class="modal-sub">Choose your program, pick a time, and let's get started.</p>
+    <form class="booking-form" id="bookingForm" onsubmit="submitBooking(event)">
+      
+      <div class="form-group">
+        <label class="form-label">Your Name *</label>
+        <input type="text" id="b_name" name="Name" class="form-input" required placeholder="Full name">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Phone / WhatsApp *</label>
+        <input type="tel" id="b_phone" name="Phone / WhatsApp" class="form-input" required placeholder="+91 or international">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address *</label>
+        <input type="email" id="b_email" name="email" class="form-input" required placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Select Service</label>
+        <select id="b_service" name="Service" class="form-select form-input">
+          <option>Personal Training</option>
+          <option>Zumba Classes</option>
+          <option>Calisthenics Training</option>
+          <option>Cycling Coaching</option>
+          <option>Dance Fitness</option>
+          <option>Home Workout Coaching</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Preferred Date</label>
+        <input type="date" class="form-input" id="bookingDate" name="Date">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Preferred Time Slot</label>
+        <div class="time-slots">
+          <div class="time-slot" onclick="selectSlot(this)">6:00 AM</div>
+          <div class="time-slot" onclick="selectSlot(this)">7:00 AM</div>
+          <div class="time-slot" onclick="selectSlot(this)">8:00 AM</div>
+          <div class="time-slot" onclick="selectSlot(this)">5:00 PM</div>
+          <div class="time-slot" onclick="selectSlot(this)">6:00 PM</div>
+          <div class="time-slot" onclick="selectSlot(this)">7:00 PM</div>
+        </div>
+        <input type="hidden" id="b_slot" name="Time Slot" value="Not selected">
+      </div>
+      <button type="submit" id="bookingSubmitBtn" class="btn-primary" style="width:100%; justify-content:center;">Confirm Free Session ⚡</button>
+      <div class="success-notice" id="bookingSuccess">
+        ✓ Booking request sent! We'll WhatsApp you within 2 hours to confirm your free session.
+      </div>
+      <div class="success-notice" id="bookingError" style="border-color:rgba(217,74,74,0.4);background:rgba(217,74,74,0.08);color:#e07070;">
+        ⚠ Something went wrong. Please call us directly at +91 82190 06245.
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Nav scroll effect
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Mobile nav
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+  function closeMobileNav() {
+    document.getElementById('mobileNav').classList.remove('open');
+  }
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // FAQ toggle
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+
+  // Booking modal
+  function openBooking(e) {
+    e && e.preventDefault();
+    document.getElementById('bookingModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+    // Set min date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('bookingDate').min = today;
+    document.getElementById('bookingDate').value = today;
+    closeMobileNav();
+  }
+  function closeBooking() {
+    document.getElementById('bookingModal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  function closeBookingOnOverlay(e) {
+    if (e.target === document.getElementById('bookingModal')) closeBooking();
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBooking(); });
+
+  // ─── WEB3FORMS CONFIG ─────────────────────────────────────────────
+  // Enter your free Web3Forms Access Key below.
+  // Get your key instantly at https://web3forms.com (just enter your email)
+  const WEB3FORMS_ACCESS_KEY = "4a8b7734-34c3-48d2-abbe-620b629129e6";
+  // ──────────────────────────────────────────────────────────────────
+
+  // Time slot selection
+  function selectSlot(el) {
+    document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+    el.classList.add('selected');
+    document.getElementById('b_slot').value = el.textContent.trim();
+  }
+
+  // Form submissions
+  function submitBooking(e) {
+    e.preventDefault();
+    const btn = document.getElementById('bookingSubmitBtn');
+    const successNotice = document.getElementById('bookingSuccess');
+    const errorNotice = document.getElementById('bookingError');
+    
+    // Hide notices & disable button
+    successNotice.classList.remove('show');
+    errorNotice.classList.remove('show');
+    
+    if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE" || !WEB3FORMS_ACCESS_KEY) {
+      errorNotice.textContent = "⚠ Setup Required: Please generate a free access key at web3forms.com and insert it into the script block of the code.";
+      errorNotice.classList.add('show');
+      return;
+    }
+    
+    btn.disabled = true;
+    const originalText = btn.textContent;
+    btn.textContent = "Sending Booking Request... ⚡";
+    
+    const name = document.getElementById('b_name').value;
+    const phone = document.getElementById('b_phone').value;
+    const email = document.getElementById('b_email').value;
+    const service = document.getElementById('b_service').value;
+    const date = document.getElementById('bookingDate').value;
+    const slot = document.getElementById('b_slot').value;
+    
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { 
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: `⚡ New FITNITY Booking from ${name}`,
+        "Client Name": name,
+        "Phone / WhatsApp": phone,
+        "Email Address": email,
+        "Requested Program": service,
+        "Preferred Date": date,
+        "Time Slot": slot,
+        from_name: "FITNITY Fitness Website"
+      })
+    })
+    .then(async response => {
+      const result = await response.json();
+      if (result.success) {
+        successNotice.classList.add('show');
+        e.target.reset();
+        document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+        document.getElementById('b_slot').value = "Not selected";
+        setTimeout(() => { 
+          closeBooking(); 
+          successNotice.classList.remove('show'); 
+        }, 4000);
+      } else {
+        errorNotice.textContent = `⚠ Error: ${result.message || 'Submission failed'}`;
+        errorNotice.classList.add('show');
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      errorNotice.textContent = `⚠ Connection Error: ${err.message || err}`;
+      errorNotice.classList.add('show');
+    })
+    .finally(() => {
+      btn.disabled = false;
+      btn.textContent = originalText;
+    });
+  }
+
+  function submitContactForm(e) {
+    e.preventDefault();
+    const btn = document.getElementById('contactSubmitBtn');
+    const successNotice = document.getElementById('contactSuccess');
+    const errorNotice = document.getElementById('contactError');
+    
+    // Hide notices & disable button
+    successNotice.classList.remove('show');
+    errorNotice.classList.remove('show');
+    
+    if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE" || !WEB3FORMS_ACCESS_KEY) {
+      errorNotice.textContent = "⚠ Setup Required: Please generate a free access key at web3forms.com and insert it into the script block of the code.";
+      errorNotice.classList.add('show');
+      return;
+    }
+    
+    btn.disabled = true;
+    const originalText = btn.textContent;
+    btn.textContent = "Sending Message... ⚡";
+    
+    const name = document.getElementById('c_name').value;
+    const phone = document.getElementById('c_phone').value;
+    const email = document.getElementById('c_email').value;
+    const goal = document.getElementById('c_goal').value;
+    const program = document.getElementById('c_program').value;
+    const message = document.getElementById('c_message').value;
+    
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { 
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: `⚡ New FITNITY Consultation Inquiry from ${name}`,
+        "Client Name": name,
+        "Phone Number": phone,
+        "Email Address": email,
+        "Fitness Goal": goal,
+        "Preferred Program": program,
+        "Message Details": message,
+        from_name: "FITNITY Fitness Website"
+      })
+    })
+    .then(async response => {
+      const result = await response.json();
+      if (result.success) {
+        successNotice.classList.add('show');
+        e.target.reset();
+        setTimeout(() => successNotice.classList.remove('show'), 6000);
+      } else {
+        errorNotice.textContent = `⚠ Error: ${result.message || 'Submission failed'}`;
+        errorNotice.classList.add('show');
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      errorNotice.textContent = `⚠ Connection Error: ${err.message || err}`;
+      errorNotice.classList.add('show');
+    })
+    .finally(() => {
+      btn.disabled = false;
+      btn.textContent = originalText;
+    });
+  }
+
+  // Smooth anchor navigation
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
